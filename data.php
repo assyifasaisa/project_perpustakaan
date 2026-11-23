@@ -12,6 +12,41 @@ $jumlah = mysqli_num_rows ($hasil);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e5e5e5;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <table>
@@ -23,6 +58,7 @@ $jumlah = mysqli_num_rows ($hasil);
             <th>No HP</th>
             <th>Jenis Anggota</th>
             <th>Alamat</th>
+            <th>Aksi</th>
         </tr>
         <?php $no = 1; while ($baris = mysqli_fetch_assoc($hasil)) { ?>
         <tr>
