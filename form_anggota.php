@@ -24,7 +24,9 @@ $jenis_list = ["Mahasiswa", "Dosen", "Tenaga Kependidikan"];
 <body>
 <div>
     <h2>Pendaftaran Anggota Perpustakaan</h2>
-
+    <button>
+        <a href="data.php">Lihat data anggota</a>
+    </button> 
     <?php if ($sukses !== ""): ?>
         <div><?= htmlspecialchars($sukses) ?></div>
     <?php endif; ?>
@@ -39,7 +41,6 @@ $jenis_list = ["Mahasiswa", "Dosen", "Tenaga Kependidikan"];
             </ul>
         </div>
     <?php endif; ?>
-
     <form action="proses_anggota.php" method="post" novalidate>
         <label for="no_anggota">Nomor Anggota</label><br>
         <input type="text" id="no_anggota" name="no_anggota" maxlength="15" value="<?= old('no_anggota', $old) ?>"><br><br>
