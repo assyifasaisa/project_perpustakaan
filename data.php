@@ -71,6 +71,7 @@ $jumlah = mysqli_num_rows ($hasil);
             <td><?php echo htmlspecialchars($baris["alamat"]); ?></td>
 
             <td>
+                <a href="edit_anggota.php?id=<?php echo (int) $baris['id']; ?>">Edit</a>
             <form action="hapus_anggota.php" method ="POST" style="display:inline;"
                 onsubmit="return confirm('Yakin ingin menghapus data ini?');">
                 <input type="hidden" name="id" value="<?php echo (int) $baris["id"]; ?>">
