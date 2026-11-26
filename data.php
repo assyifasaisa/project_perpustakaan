@@ -81,5 +81,9 @@ $jumlah = mysqli_num_rows ($hasil);
         </tr>
     <?php } ?>
     </table>
+    <br>
+    <button>
+        <a href="form_anggota.php">Kembali ke form</a>
+    </button>
 </body>
 </html>
